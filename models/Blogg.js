@@ -23,6 +23,8 @@ Blogg.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
           },
+        // author:
+        
         user_id: {
         type: DataTypes.INTEGER,
         references: {
