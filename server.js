@@ -11,7 +11,7 @@ const sequelize = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// const hbs = exphbs.create({ helpers });
+const hbs = exphbs.create({});
 
 // const sess = {
 //     secret: 'Super secret secret',
@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 3001;
 // app.use(session(sess));
 
 // Inform Express.js on which template engine to use
-// app.engine('handlebars', hbs.engine);
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
